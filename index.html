@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./assets/css/main.css">
         <link rel="stylesheet" href="./assets/css/base.css">
         <link rel="stylesheet" href="./assets/css/grid.css">
+        <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -20,16 +21,45 @@
                 <div class="grid wide">
                     <nav class="header__navbar ">
                         <ul class="header__navbar-list">
-                            <li class="header__navbar-item header__navbar-item--separate">Vào cửa hàng trên ứng dụng shopee</li>
-                            <li class="header__navbar-item">Kết nối</li>
+                            <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
+                                Vào cửa hàng trên ứng dụng shopee
+
+                                <!-- Header QR code -->
+                                <div class="header__qr">
+                                    <img src="./assets/img/QR_code.png" alt="QR code" class="header__qr-img">
+                                    <div class="header__qr-apps">
+                                        <a href="https://apps.apple.com/vn/app/id959841449" target="_blank" class="header__qr-link">
+                                            <img src="./assets/img/appstore.png" alt="Apple Play" class="header__qr-download-img">
+                                        </a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.shopee.vn&referrer=af_tranid%3Drsx9V4J79OX3NH5LwyqLcw%26pid%3DOrganicA%26c%3Dlp_home_and1" target="_blank" class="header__qr-link">
+                                            <img src="./assets/img/gg_play.png" alt="Google Play" class="header__qr-download-img">
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__navbar-item">
+                                <span class="header__navbar-title--no-pointer">Kết nối</span>
+                                <a href="" class="header__navbar-icon-link">
+                                    <i class="header__navbar-icon fab fa-facebook"></i>
+                                </a>
+                                <a href="" class="header__navbar-icon-link">
+                                    <i class="header__navbar-icon fab fa-instagram"></i>
+                                </a>
+                            </li>
                         </ul>
     
                         <ul class="header__navbar-list">
                             <li class="header__navbar-item">
-                                <a href="" class="header__navbar-item-link">Thông Báo</a>
+                                <a href="" class="header__navbar-item-link">
+                                    <i class="header__navbar-icon fas fa-bell"></i>
+                                    Thông Báo
+                                </a>
                             </li>
                             <li class="header__navbar-item">
-                                <a href="" class="header__navbar-item-link">Trợ Giúp</a>
+                                <a href="" class="header__navbar-item-link">
+                                    <i class="header__navbar-icon far fa-question-circle"></i>    
+                                    Trợ Giúp
+                                </a>
                             </li>
                             <li class="header__navbar-item header__navbar-item--bold header__navbar-item--separate">Đăng Ký</li>
                             <li class="header__navbar-item header__navbar-item--bold">Đăng Nhập</li>

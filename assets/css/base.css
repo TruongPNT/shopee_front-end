@@ -16,6 +16,12 @@ html {
     box-sizing: border-box;
 }
 
-
-
+/* animation */
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
 
