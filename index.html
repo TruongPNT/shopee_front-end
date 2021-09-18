@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./assets/css/base.css">
         <link rel="stylesheet" href="./assets/css/main.css">
         <link rel="stylesheet" href="./assets/css/grid.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css">
         <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +20,7 @@
 
             <header class="header">
                 <div class="grid wide">
-                    <nav class="header__navbar ">
+                    <nav class="header__navbar hide-on-mobile-tablet">
                         <ul class="header__navbar-list">
                             <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
                                 Vào cửa hàng trên ứng dụng shopee
@@ -134,7 +135,17 @@
 
                     <!-- Header with search -->
                     <div class="header-with-search">
-                        <div class="header__logo">
+                        <div class="header__mobile-navbar hide-on-tablet">
+                            <label for="mobile-search-menu" class="header__mobile-menu hide-on-tablet">
+                                <i class="header__mobile-menu-icon fas fa-bars"></i>
+                            </label>
+    
+                            <label for="mobile-search-checkbox" class="header__mobile-search hide-on-tablet">
+                                <i class="header__mobile-search-icon fas fa-search"></i>
+                            </label>
+                        </div>
+
+                        <div class="header__logo hide-on-tablet">
                             <a href="/" class="header__logo-link">
                                 <svg viewBox="0 0 192 65" class="header__logo-img">
                                     <g fill-rule="evenodd">
@@ -146,7 +157,10 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="header__search">
+
+                        <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+
+                        <div class="header__search ">
                             <div class="header__search-input-wrap">
                                 <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
 
@@ -328,14 +342,31 @@
                     </div>
                 </div>
                 
+                <ul class="header__sort-bar">
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Liên quan</a>
+                    </li>
 
+                    <li class="header__sort-item header__sort-item--active">
+                        <a href="" class="header__sort-link">Mới nhất</a>
+                    </li>
+
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Bán chạy</a>
+                    </li>
+
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Giá</a>
+                    </li>
+
+                </ul>
             </header>
 
             <div class="app_container">
                 <div class="grid wide">
-                    <div class="row app__content">
+                    <div class="row sm-gutter app__content">
                         <!-- nav bar -->
-                        <div class="col l-2">
+                        <div class="col l-2 m-0 c-0">
                             <nav class="category">
                                 <h3 class="category_heading">
                                     <i class="category_heading-icon fas fa-bars"></i>
@@ -356,48 +387,48 @@
                             </nav>
                         </div>
                         <!-- list item -->
-                        <div class="col l-10">
-                            <div class="row">
-                                <div class="home-filter">
-                                    <span class="home-filter__label">Sắp xếp theo</span>
-                                    <button class="home-filter__btn btn">Phổ Biến</button>
-                                    <button class="home-filter__btn btn btn--primary">Mới Nhất</button>
-                                    <button class="home-filter__btn btn">Bán Chạy</button>
-    
-                                    <div class="select-input">
-                                        <span class="select-input__label">Giá</span>
-                                        <i class="select-input__icon fas fa-angle-down"></i>
-                                        <ul class="select-input__list">
-                                            <li class="select-input__item">
-                                                <a href="" class="select-input__link">Giá: Thấp đến Cao</a>                                          
-                                            </li>
-                                            <li class="select-input__item">
-                                                <a href="" class="select-input__link">Giá: Cao đến Thấp</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="home-filter__page">
-                                        <span class="home-filter__page-num">
-                                            <span class="home-filter__page-current">1</span>/14
-                                        </span>
-    
-                                        <div class="home-filter__page-control">
-                                            <a href="" class="home-filter__page-btn home-filter__page-btn--disable">
-                                                <i class="home-filter__page-icon fas fa-angle-left"></i>
-                                            </a>
-                                            <a href="" class="home-filter__page-btn">
-                                                <i class="home-filter__page-icon fas fa-angle-right"></i>
-                                            </a>
-                                        </div>
+                        <div class="col l-10 m-12 c-12">
+
+                            <div class="home-filter hide-on-mobile-tablet">
+                                <span class="home-filter__label">Sắp xếp theo</span>
+                                <button class="home-filter__btn btn">Phổ Biến</button>
+                                <button class="home-filter__btn btn btn--primary">Mới Nhất</button>
+                                <button class="home-filter__btn btn">Bán Chạy</button>
+
+                                <div class="select-input">
+                                    <span class="select-input__label">Giá</span>
+                                    <i class="select-input__icon fas fa-angle-down"></i>
+                                    <ul class="select-input__list">
+                                        <li class="select-input__item">
+                                            <a href="" class="select-input__link">Giá: Thấp đến Cao</a>                                          
+                                        </li>
+                                        <li class="select-input__item">
+                                            <a href="" class="select-input__link">Giá: Cao đến Thấp</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="home-filter__page">
+                                    <span class="home-filter__page-num">
+                                        <span class="home-filter__page-current">1</span>/14
+                                    </span>
+
+                                    <div class="home-filter__page-control">
+                                        <a href="" class="home-filter__page-btn home-filter__page-btn--disable">
+                                            <i class="home-filter__page-icon fas fa-angle-left"></i>
+                                        </a>
+                                        <a href="" class="home-filter__page-btn">
+                                            <i class="home-filter__page-icon fas fa-angle-right"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
+
                             
                             <div class="home-product">
-                                <div class="row ">
+                                <div class="row sm-gutter">
                                     <!-- product item -->
-                                    <div class="col l-2-4 ">
+                                    <div class="col l-2-4 m-4 c-6 ">
                                         <a class="home-product-item" href="#">
                                             <div class="home-product-item__img" style="background-image:url(./assets/img/toy2.jpg);" ></div>
                                             <h4 class="home-product-item__name">TT HG 14 Gundam Throne Drei</h4>
@@ -438,7 +469,7 @@
     
                                         </a>
                                     </div>
-                                    <div class="col l-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a class="home-product-item" href="#">
                                             <div class="home-product-item__img" style="background-image:url(./assets/img/toy2.jpg);" ></div>
                                             <h4 class="home-product-item__name">TT HG 14 Gundam Throne Drei</h4>
@@ -479,7 +510,7 @@
     
                                         </a>
                                     </div>
-                                    <div class="col l-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a class="home-product-item" href="#">
                                             <div class="home-product-item__img" style="background-image:url(./assets/img/toy2.jpg);" ></div>
                                             <h4 class="home-product-item__name">TT HG 14 Gundam Throne Drei</h4>
@@ -520,7 +551,7 @@
     
                                         </a>
                                     </div>
-                                    <div class="col l-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a class="home-product-item" href="#">
                                             <div class="home-product-item__img" style="background-image:url(./assets/img/toy2.jpg);" ></div>
                                             <h4 class="home-product-item__name">TT HG 14 Gundam Throne Drei</h4>
@@ -561,7 +592,7 @@
     
                                         </a>
                                     </div>
-                                    <div class="col l-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a class="home-product-item" href="#">
                                             <div class="home-product-item__img" style="background-image:url(./assets/img/toy2.jpg);" ></div>
                                             <h4 class="home-product-item__name">TT HG 14 Gundam Throne Drei</h4>
@@ -602,7 +633,7 @@
     
                                         </a>
                                     </div>
-                                    <div class="col l-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a class="home-product-item" href="#">
                                             <div class="home-product-item__img" style="background-image:url(./assets/img/toy2.jpg);" ></div>
                                             <h4 class="home-product-item__name">TT HG 14 Gundam Throne Drei</h4>
@@ -643,7 +674,7 @@
     
                                         </a>
                                     </div>
-                                    <div class="col l-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a class="home-product-item" href="#">
                                             <div class="home-product-item__img" style="background-image:url(./assets/img/toy2.jpg);" ></div>
                                             <h4 class="home-product-item__name">TT HG 14 Gundam Throne Drei</h4>
@@ -684,7 +715,7 @@
     
                                         </a>
                                     </div>
-                                    <div class="col l-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a class="home-product-item" href="#">
                                             <div class="home-product-item__img" style="background-image:url(./assets/img/toy2.jpg);" ></div>
                                             <h4 class="home-product-item__name">TT HG 14 Gundam Throne Drei</h4>
@@ -725,7 +756,7 @@
     
                                         </a>
                                     </div>
-                                    <div class="col l-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a class="home-product-item" href="#">
                                             <div class="home-product-item__img" style="background-image:url(./assets/img/toy2.jpg);" ></div>
                                             <h4 class="home-product-item__name">TT HG 14 Gundam Throne Drei</h4>
@@ -766,7 +797,7 @@
     
                                         </a>
                                     </div>
-                                    <div class="col l-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a class="home-product-item" href="#">
                                             <div class="home-product-item__img" style="background-image:url(./assets/img/toy2.jpg);" ></div>
                                             <h4 class="home-product-item__name">TT HG 14 Gundam Throne Drei</h4>
@@ -853,7 +884,7 @@
                 <div class="footer__bottom">
                     <div class="grid wide">
                         <div class="row footer__info">
-                            <div class="col l-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <h3 class="footer__heading">CHĂM SÓC KHÁCH HÀNG</h3>
                                 <ul class="footer-list">
                                     <li class="footer-item">
@@ -891,7 +922,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col l-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <h3 class="footer__heading">VỀ SHOPEE</h3>
                                 <ul class="footer-list">
                                     <li class="footer-item">
@@ -923,7 +954,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col l-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <h3 class="footer__heading">THANH TOÁN</h3>
                                 <ul class="payment-methods">
                                     <li class="payment-methods-list">
@@ -964,7 +995,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col l-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <h3 class="footer__heading">THEO DÕI CHÚNG TÔI TRÊN</h3>
                                 <ul class="footer-list">
                                     <li class="footer-item">
@@ -987,7 +1018,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col l-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <h3 class="footer__heading">TẢI ỨNG DỤNG SHOPEE NGAY THÔI</h3>
                                 <div class="footer__download">
                                     <img src="./assets/img/QR_code.png" alt="Download QR" class="footer__download-qr">
