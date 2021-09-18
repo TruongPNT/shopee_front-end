@@ -1,10 +1,5 @@
 /* Mobile & tablet */
 @media (max-width:1024px) {
-    :root {
-        --header-height: 68px;
-        --navbar-height: 0;
-    }
-
     .header {
         position: fixed;
         z-index: 10;
@@ -48,6 +43,11 @@
 
 /* tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
+    :root {
+        --header-height: 68px;
+        --navbar-height: 0;
+    }
+
     .hide-on-tablet {
         display: none;
     }
@@ -62,13 +62,18 @@
 
 /* mobile */
 @media (max-width: 739px) {
+    :root {
+        --header-height: 54px;
+        --navbar-height: 0;
+    }
+
     .hide-on-mobile {
         display: none;
     }
 
     .header-with-search {
         justify-content: space-between;
-        margin-top: 13px;
+        margin-top: 7px;
     }
 
     .header__cart,
@@ -130,5 +135,23 @@
 
     .footer__content{
         padding: 0 16px;
+    }
+
+    .footer__heading {
+        text-align: center;
+    }
+
+    .footer__download,
+    .footer-item__link {
+        justify-content: center;
+    }
+
+    .footer__dowload-apps {
+        flex: unset;
+    }
+
+    .footer__dowload-apps-link{
+        display: block;
+        padding: 6px 8px;
     }
 }

@@ -769,6 +769,7 @@
     padding-left: 16px;
     position: relative;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header__search-select-label {
