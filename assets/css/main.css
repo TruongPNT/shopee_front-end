@@ -506,6 +506,10 @@
     padding: 0 12px;
 }
 
+.header__mobile-navbar {
+    display: none;
+}
+
 .header__mobile-search-icon {
     font-size: 2.6rem;
     color: var(--white-color);
@@ -559,6 +563,7 @@
     display: inline-block;
     padding: 0 8px;
     cursor: pointer;
+    -webkit-tap-highlight-color:transparent;
 }
 
 .header__cart-icon {
@@ -956,6 +961,7 @@
 }
 .header__sort-item--active .header__sort-link{
     color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .header__sort-item:first-child .header__sort-link::before {
@@ -1026,6 +1032,62 @@
     color: var(--primary-color);
     opacity: 0.9;
 }
+
+/* mobile category */
+
+.mobile-category {
+    display: none;
+}
+
+.mobile-category__list {
+    display: flex;
+    list-style: none;
+    padding-left: 0 ;
+    max-width: 100%;
+    overflow-x: auto;
+    
+}
+
+.mobile-category__list::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-category__item {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.mobile-category__item:nth-of-type(3n+1) .mobile-category__link{
+    background-color: #87AFD8;
+}
+.mobile-category__item:nth-of-type(3n+2) .mobile-category__link{
+    background-color: #76D9BD;
+}
+.mobile-category__item:nth-of-type(3n) .mobile-category__link{
+    background-color: #88cf81;
+}
+
+.mobile-category__link {
+    --line-height: 2rem; 
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    line-height: var(--line-height);
+    text-align: center;
+    height: calc(var(--line-height)*2);
+    overflow: hidden;
+    width: 110px;
+    display: block;
+    border-radius: 3px;
+    font-weight: 300;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    -webkit-tap-highlight-color:transparent;
+    padding: 0 6px;
+}
+
 
 /* home short + filter */
 .home-filter {
@@ -1316,6 +1378,7 @@ i.home-product-item__like-icon-fill {
 .footer__info {
     border-top: 1px solid #e8e8e8;
     border-bottom: 1px solid #e8e8e8;
+    padding: 20px 0;
 }
 
 .footer__heading {
